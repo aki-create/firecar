@@ -1,0 +1,598 @@
+/**
+ * 01/28/2016
+ * This pen is years old, and watching at the code after all
+ * those years made me fall from my chair, so I:
+ * - changed all IDs to classes
+ * - converted all units to pixels and em units
+ * - changed all global elements to classes or children of
+ *   .login
+ * - cleaned the syntax to be more consistent
+ * - added a lot of spaces that I so hard tried to avoid
+ *   a few years ago
+ *   (because it's cool to not use them)
+ * - and probably something else that I can't remember anymore
+ *
+ * I sticked to the same philosophy, meaning:
+ * - the design is almost the same
+ * - only pure HTML and CSS
+ * - no frameworks, preprocessors or resets
+ */
+
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+	/*background: #F4F5F7;*/
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+		"游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	color: black;
+	background-image: url("back.jpg");
+	margin: 40px;
+}
+
+.sample {
+	/* opacity: 0.55;  55％不透明度(＝45％透過) */
+	background-color: rgba(255, 255, 255, 0.50);
+	padding: 40px;
+}
+
+.wrapper {
+	min-height: 100vh;
+	position: relative; /*←相対位置*/
+	padding-bottom: 120px; /*←footerの高さ*/
+	box-sizing: border-box; /*←全て含めてmin-height:100vhに*/
+}
+
+footer {
+	width: 100%;
+	background-color: #89c7de;
+	color: #fff;
+	text-align: center;
+	padding: 30px 0;
+	position: absolute; /*←絶対位置*/
+	bottom: 0; /*下に固定*/
+}
+
+.button {
+	display: inline-block;
+	border-radius: 20%; /* 角丸       */
+	font-size: 15pt; /* 文字サイズ */
+	text-align: center; /* 文字位置   */
+	cursor: pointer; /* カーソル   */
+	padding: 12px 12px; /* 余白       */
+	background: #000066; /* 背景色     */
+	color: #ffffff; /* 文字色     */
+	line-height: 1em; /* 1行の高さ  */
+	transition: .3s; /* なめらか変化 */
+	box-shadow: 6px 6px 3px #666666; /* 影の設定 */
+	border: 2px solid #000066; /* 枠の指定 */
+}
+
+.button:hover {
+	box-shadow: none; /* カーソル時の影消去 */
+	color: #000066; /* 背景色     */
+	background: #ffffff; /* 文字色     */
+}
+
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+
+.cp_iptxt input[type='tel'], .cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+}
+
+.cp_iptxt input[type='tel']:focus, .cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+
+.ef {
+	position: relative;
+	padding: 7px 15px;
+	border: 0;
+	border: 1px solid #1b2538;
+	background: transparent;
+}
+
+.ef ~ .focus_bg:before, .ef ~ .focus_bg:after {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	content: '';
+	transition: 0.3s;
+	background-color: rgba(218, 60, 65, .3);
+}
+
+.ef:focus {
+	border: 1px solid #da3c41;
+}
+
+.ef:focus ~ .focus_bg:before, .cp_iptxt.ef ~ .focus_bg:before {
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	transition: 0.3s;
+}
+
+.ef ~ .focus_bg:after {
+	top: auto;
+	right: 50%;
+	bottom: 50%;
+	left: auto;
+}
+
+.ef:focus ~ .focus_bg:after, .cp_iptxt.ef ~ .focus_bg:after {
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 100%;
+	transition: 0.3s;
+}
+
+.ef ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 14px;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: black;
+}
+
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+	font-size: 12px;
+	top: -18px;
+	left: 0;
+	transition: 0.3s;
+	color: black;
+}
+
+ul.topnav {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #1b2538;
+}
+
+ul.topnav li {
+	float: left;
+}
+
+ul.topnav li a {
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+ul
+
+
+
+
+
+
+
+
+
+
+.topnav
+
+
+
+
+
+
+
+
+
+
+
+li
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+
+
+
+
+
+:hover
+
+
+
+
+
+
+
+
+
+
+:not
+
+
+
+
+
+
+
+
+
+
+
+(
+.active
+
+
+
+
+
+
+
+
+
+
+
+)
+{
+background-color
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+#a9bce2
+
+
+
+
+
+
+
+
+
+
+;
+}
+ul.topnav li a.active {
+	background-color: #da3c41;
+}
+
+ul.topnav li.right {
+	float: right;
+}
+
+@media screen and (max-width: 480px) {
+	ul.topnav li.right, ul.topnav li {
+		float: none;
+	}
+}
+
+ul.sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #1b2538;
+	position: relative;
+	overflow: auto;
+}
+
+ul.sidenav li a {
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+ul.sidenav li a.active {
+	background-color: #da3c41;
+	color: white;
+}
+
+ul
+
+
+
+
+
+
+
+
+
+
+.sidenav
+
+
+
+
+
+
+
+
+
+
+
+li
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+
+
+
+
+
+:hover
+
+
+
+
+
+
+
+
+
+
+:not
+
+
+
+
+
+
+
+
+
+
+
+(
+.active
+
+
+
+
+
+
+
+
+
+
+
+)
+{
+background-color
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+#a9bce2
+
+
+
+
+
+
+
+
+
+
+;
+color
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+white
+
+
+
+
+
+
+
+
+
+
+;
+}
+div.content {
+	margin-left: 25%;
+	padding: 1px 16px;
+	height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+	ul.sidenav {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	ul.sidenav li a {
+		float: left;
+		padding: 15px;
+	}
+	div.content {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	ul.sidenav li a {
+		text-align: center;
+		float: none;
+	}
+}
+
+.login {
+	width: 400px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header, .login p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+	width: 0;
+	margin-right: auto;
+	margin-left: auto;
+	border: 12px solid transparent;
+	border-bottom-color: #28d;
+}
+
+.login-header {
+	background: #28d;
+	padding: 20px;
+	font-size: 1.4em;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.login-container {
+	background: #ebebeb;
+	padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+	padding: 12px;
+}
+
+.login input {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	padding: 16px;
+	outline: 0;
+	font-family: inherit;
+	font-size: 0.95em;
+}
+
+.login input[type="text"], .login input[type="password"] {
+	background: #fff;
+	border-color: #bbb;
+	color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="text"]:focus, .login input[type="password"]:focus {
+	border-color: #888;
+}
+
+.login input[type="submit"] {
+	background: #28d;
+	border-color: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+	background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+	border-color: #05a;
+}
